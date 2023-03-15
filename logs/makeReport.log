@@ -1,0 +1,11 @@
+[2023-03-14T22:07:56.856] [INFO] debug - Report Aggregation started
+[2023-03-14T22:07:56.866] [INFO] debug - Included metrics for suite: 0-0 login.feature:1:1
+[2023-03-14T22:07:56.867] [INFO] debug - Aggregated 1 specs, 1 suites, 
+[2023-03-14T22:07:56.869] [INFO] debug - Json report write starting: C:\Users\JeevaSubramanian\Downloads\NewTryAfterBuildFailed71\reports\html-reports\master-report.json
+[2023-03-14T22:07:56.937] [INFO] debug - Json write completed: C:\Users\JeevaSubramanian\Downloads\NewTryAfterBuildFailed71\reports\html-reports\master-report.json
+[2023-03-14T22:07:56.938] [INFO] debug - Json Generation Completed
+[2023-03-14T22:07:56.940] [INFO] debug - Html Generation started in C:\Users\JeevaSubramanian\Downloads\NewTryAfterBuildFailed71\node_modules\wdio-html-nice-reporter
+[2023-03-14T22:07:56.971] [INFO] debug - Html Generation Completed
+[2023-03-14T22:07:56.987] [INFO] debug - copyied css : C:\Users\JeevaSubramanian\Downloads\NewTryAfterBuildFailed71\node_modules\wdio-html-nice-reporter\css\ to C:\Users\JeevaSubramanian\Downloads\NewTryAfterBuildFailed71\reports\html-reports\
+[2023-03-14T22:07:57.000] [INFO] debug - browser launched
+[2023-03-14T22:07:57.000] [INFO] debug - Report Aggregation completed

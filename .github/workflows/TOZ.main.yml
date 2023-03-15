@@ -1,0 +1,53 @@
+name: WDIO-CI
+on:
+  push:
+    branches: [ main, release]
+  pull_request:
+    branches: [ main, release]
+    permissions: read-all|write-all
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      RUNNER: ${{secrets.RUNNER}}
+      LOG_LEVEL: ${{secrets.LOG_LEVEL}}
+      DEV_ADMIN_USERNAME: ${{secrets.DEV_ADMIN_USERNAME}}
+      DF_PASSWORD: ${{secrets.DF_PASSWORD}}
+      DEV_MNGR_USERNAME: ${{secrets.DEV_MNGR_USERNAME}}
+      DEV_EMP_USERNAME: ${{secrets.DEV_EMP_USERNAME}}
+      DEV_EMP1_USERNAME: ${{secrets.DEV_EMP1_USERNAME}}
+      PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      PUBLISH_BRANCH: gh-pages
+      PUBLISH_DIR: allure-history
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Chromium
+        run: sudo apt-get install chromium-browser
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+      - name: Install dependencies
+        run: npm install
+      - name: Executing tests
+        run: npm run TestRun
+      - name: Get Allure history
+        uses: actions/checkout@v2
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+      - name: Test marketplace action
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        id: allure-report
+        with:
+          allure_results: build/allure-results
+          gh_pages: gh-pages
+          allure_report: allure-report
+          allure_history: allure-history
+      - name: Deploy report to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v2

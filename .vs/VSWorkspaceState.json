@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\TOZTEST",
+    "\\TOZTEST\\ROOT",
+    "\\TOZTEST\\ROOT\\POM",
+    "\\TOZTEST\\ROOT\\POM\\features",
+    "\\TOZTEST\\ROOT\\POM\\features\\leaveManagement"
+  ],
+  "SelectedNode": "\\TOZTEST\\ROOT\\POM\\features\\leaveManagement\\applyLeave.feature",
+  "PreviewInSolutionExplorer": false
+}
