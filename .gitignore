@@ -8,11 +8,3 @@ reports/html-reports/master-report.html
 reports\html-reports\
 reports/html-reports/
 logs
-package.json
-package-lock.json
-tsconfig.json
-wdio.conf.ts
-.package.json
-.package-lock.json
-.tsconfig.json
-.wdio.conf.ts
